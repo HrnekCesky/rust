@@ -34,7 +34,7 @@ impl Animal {
         // with &mut self we can change it
         println!("Changing animal to cat!");
         self.animal_type = AnimalType::Cat;
-    }
+
 
     fn check_type(&self) {
         // we want to read self
