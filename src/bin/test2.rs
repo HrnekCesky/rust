@@ -1,25 +1,34 @@
-struct Person { // make a simple struct for a person
+struct Person {
     name: String,
     real_name: String,
     f_p_l: String,
-    happiness: bool
+    happiness: bool,
 }
 
 fn main() {
-    let papa_doc = Person { // create variable papa_doc
+    let hrnek = Person {
         name: "Hrnek".to_string(),
         real_name: "Adam".to_string(),
         f_p_l: "Python".to_string(),
-        happiness: false
+        happiness: false,
     };
 
-    let Person { // destructure papa_doc
+    let Person {
         name: a,
         real_name: b,
         f_p_l: c,
-        happiness: d
-    } = papa_doc;
+        happiness: d,
+    } = hrnek;
 
-    println!("They call him {} but his real name is {}. His favourite programing language is {}, is he happy? {}", a, b, c, d);
+    // In Rust, if-else can directly assign the result to a variable:
+    let d1 = if !d {
+        "No"
+    } else {
+        "Yes"
+    };
+
+    println!(
+        "They call him {} but his real name is {}. His favourite programming language is {}, is he happy? {}",
+        a, b, c, d1
+    );
 }
-
