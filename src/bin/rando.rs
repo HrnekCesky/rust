@@ -1,9 +1,7 @@
-fn return_number(number: i32) -> i32 {
-    println!("Here is your number.");
-    number * 12
-}
-
+const AHOJ: i32 = 1;
 fn main() {
-    let test = return_number(5);
-    println!("{}", test)
+    let selected_index: usize = 0;
+
+    // Arrow keys update selected_index (e.g. 0 -> 1 -> 2)
+    println!("Currently selected: {}", MENU_OPTIONS[selected_index]);
 }
